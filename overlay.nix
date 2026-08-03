@@ -116,7 +116,7 @@ final: prev: {
             substitutions = {
               inherit nix;
               pythonSitePackages = python.sitePackages;
-              autoPatchelfHook = "${final.path}/pkgs/build-support/setup-hooks/auto-patchelf.sh";
+              autoPatchelfHook = final.path + /pkgs/build-support/setup-hooks/auto-patchelf.sh;
             };
           } ./auto-patchelf-venv-shell-hook.sh
         ) { };
